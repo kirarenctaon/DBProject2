@@ -35,6 +35,8 @@ public class TableModels extends AbstractTableModel {
 				int count=meta.getColumnCount();//컬럼의 갯수
 				
 				column=new String[count];//컬럼을 담을 배열을 준비
+				
+				
 				//컬럼명을 채우자!
 				for(int i=0;i<column.length;i++){
 					column[i]=meta.getColumnName(i+1); //첫번째 컬럼은 1일라고 생각하기 때문에 i+1이라고 하자
@@ -100,6 +102,7 @@ public class TableModels extends AbstractTableModel {
 		return data[row][col];
 	} 
 	
+	//테이블 구조상 이름을 보여줌
 	@Override
 	public String getColumnName(int column) {
 		return this.column[column];
